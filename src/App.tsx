@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, Github, Linkedin, GraduationCap, Calendar, MapPin } from 'lucide-react';
+import { FaRegChessKing } from "react-icons/fa6";
 import { Button } from 'components/ui/button';
 import { Card, CardHeader, CardContent, CardFooter, CardTitle, CardDescription } from 'components/ui/card';
 import { Badge } from 'components/ui/badge';
@@ -116,6 +117,9 @@ export default function App() {
                 </a>
                 <a className="inline-flex items-center gap-2 hover:underline" href={LINKS.linkedin} target="_blank" rel="noreferrer noopener">
                   <Linkedin className="h-4 w-4" /> LinkedIn
+                </a>
+                <a className="inline-flex items-center gap-2 hover:underline" href={LINKS.chess} target="_blank" rel="noreferrer noopener">
+                  <FaRegChessKing className="h-4 w-4" /> Chess.com
                 </a>
               </CardContent>
             </Card>
