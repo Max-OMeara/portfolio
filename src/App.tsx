@@ -93,8 +93,14 @@ export default function App() {
             </div>
             <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-500 dark:text-slate-400">
               <span className="inline-flex items-center gap-2">
-                <GraduationCap className="h-4 w-4" /> Boston University • GPA {EDUCATION.gpa} • {EDUCATION.gradDate}
+                <GraduationCap className="h-4 w-4" /> {EDUCATION.school}
               </span>
+            </div>
+            <div className="text-sm text-slate-500 dark:text-slate-400"> 
+                {EDUCATION.degree} w/ minor in {EDUCATION.minor}
+            </div>
+            <div className="text-sm text-slate-500 dark:text-slate-400"> 
+                GPA: {EDUCATION.gpa}, Expected Graduation Date: {EDUCATION.gradDate}
             </div>
           </div>
           <div className="md:col-span-4">
