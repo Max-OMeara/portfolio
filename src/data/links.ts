@@ -1,10 +1,4 @@
-type LinkSet = {
-  email: string;
-  phone?: string;
-  github?: string;
-  linkedin?: string;
-  chess?: string; // new
-};
+import { LinkSet } from 'types';
 
 export const LINKS: LinkSet = {
   email: 'mxomeara@bu.edu',

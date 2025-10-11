@@ -3,6 +3,7 @@ export const EDUCATION: Education = {
 school: 'Boston University',
 location: 'Boston, MA',
 degree: 'B.A. in Computer Science',
+minor: 'Classical Civilization',
 gpa: '3.49',
 gradDate: 'May 2026',
 coursework: [
