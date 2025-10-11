@@ -3,6 +3,7 @@ email: string;
 phone: string;
 github: string;
 linkedin: string;
+chess: string;
 };
 
 
@@ -10,6 +11,7 @@ export type Education = {
 school: string;
 location: string;
 degree: string;
+minor: string;
 gpa: string;
 gradDate: string;
 coursework: string[];
