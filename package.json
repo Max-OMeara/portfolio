@@ -1,5 +1,4 @@
 {
-  "homepage": "https://max-omeara.github.io/portfolio",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -30,8 +29,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:docs": "cross-env BUILD_PATH=docs react-scripts build"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -50,8 +51,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "cross-env": "^10.1.0"
   }
 }
