@@ -16,6 +16,7 @@ import { SKILLS } from 'data/skills';
 import { EXPERIENCE } from 'data/experience';
 import { PROJECTS } from 'data/projects';
 import { LEADERSHIP } from 'data/leadership';
+import DarkVeil from 'components/DarkVeil';
 
 export default function App() {
   const [dark, setDark] = useState(true);
@@ -32,7 +33,7 @@ export default function App() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900 text-slate-900 dark:text-slate-100">
+    <div className="min-h-screen bg-black text-slate-100">
       {/* Header / Nav */}
       <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-slate-900/60 bg-white/60 dark:bg-slate-900/60 border-b border-slate-200 dark:border-slate-800">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -60,9 +61,9 @@ export default function App() {
             </a>
           </nav>
           <div className="flex items-center gap-2">
-            <Button variant="outline" size="sm" onClick={() => setDark((d) => !d)}>
+            {/* <Button variant="outline" size="sm" onClick={() => setDark((d) => !d)}>
               {dark ? 'Light' : 'Dark'}
-            </Button>
+            </Button> */}
             <Button asChild size="sm">
               <a href={LINKS.github} target="_blank" rel="noreferrer noopener">
                 GitHub
@@ -73,65 +74,83 @@ export default function App() {
       </header>
 
       {/* Hero */}
-      <div id="top" className="max-w-6xl mx-auto px-4 pt-12 sm:pt-16">
-        <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="grid md:grid-cols-12 gap-6 items-center">
-          <div className="md:col-span-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">Max O’Meara</h1>
-            <p className="mt-3 text-lg text-slate-500 dark:text-slate-400 max-w-2xl">{headline}</p>
-            <div className="mt-5 flex flex-wrap gap-3">
-              <Button asChild>
-                <a href="#projects">View Projects</a>
-              </Button>
-              <Button asChild variant="secondary">
-                <a href={LINKS.linkedin} target="_blank" rel="noreferrer noopener">
-                  LinkedIn
-                </a>
-              </Button>
-              <Button asChild variant="outline">
-                <a href="#contact">Contact</a>
-              </Button>
-            </div>
-            <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-500 dark:text-slate-400">
-              <span className="inline-flex items-center gap-2">
-                <GraduationCap className="h-4 w-4" /> {EDUCATION.school}
-              </span>
-            </div>
-            <div className="text-sm text-slate-500 dark:text-slate-400"> 
-                {EDUCATION.degree} w/ minor in {EDUCATION.minor}
-            </div>
-            <div className="text-sm text-slate-500 dark:text-slate-400"> 
-                GPA: {EDUCATION.gpa}, Expected Graduation Date: {EDUCATION.gradDate}
-            </div>
+      <section id="top" className="relative overflow-hidden -mt-16 pt-16">
+        <div className="relative h-[56vh] sm:h-[64vh]">
+          {/* Background only inside hero */}
+          <div className="absolute inset-0 z-0">  {/* changed from -z-10 */}
+            <DarkVeil className="absolute inset-0" /> {/* make sure it fills this box */}
           </div>
-          <div className="md:col-span-4">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-base">Quick Links</CardTitle>
-                <CardDescription>Find me around the web</CardDescription>
-              </CardHeader>
-              <CardContent className="grid gap-2 text-sm">
-                <a className="inline-flex items-center gap-2 hover:underline" href={`mailto:${LINKS.email}`}>
-                  <Mail className="h-4 w-4" />
-                  {LINKS.email}
-                </a>
-                <a className="inline-flex items-center gap-2 hover:underline" href={`tel:${LINKS.phone}`}>
-                  <Phone className="h-4 w-4" />
-                  {LINKS.phone}
-                </a>
-                <a className="inline-flex items-center gap-2 hover:underline" href={LINKS.github} target="_blank" rel="noreferrer noopener">
-                  <Github className="h-4 w-4" /> GitHub
-                </a>
-                <a className="inline-flex items-center gap-2 hover:underline" href={LINKS.linkedin} target="_blank" rel="noreferrer noopener">
-                  <Linkedin className="h-4 w-4" /> LinkedIn
-                </a>
-                <a className="inline-flex items-center gap-2 hover:underline" href={LINKS.chess} target="_blank" rel="noreferrer noopener">
-                  <FaRegChessKing className="h-4 w-4" /> Chess.com
-                </a>
-              </CardContent>
-            </Card>
+
+          {/* Fade the veil into black so the transition is smooth */}
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-black z-10" />
+
+          {/* Content container */}
+          <div className="max-w-6xl mx-auto h-full px-4 relative z-10"> {/* ensure content is above veil */}
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="grid md:grid-cols-12 gap-6 items-start pt-12 sm:pt-16"
+            >
+              {/* Left column */}
+              <div className="md:col-span-8">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
+                  Max O’Meara
+                </h1>
+                <p className="mt-3 text-lg text-slate-300 max-w-2xl">{headline}</p>
+
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <Button asChild><a href="#projects">View Projects</a></Button>
+                  <Button asChild variant="secondary">
+                    <a href={LINKS.linkedin} target="_blank" rel="noreferrer noopener">LinkedIn</a>
+                  </Button>
+                  <Button asChild variant="outline"><a href="#contact">Contact</a></Button>
+                </div>
+
+                <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-300">
+                  <span className="inline-flex items-center gap-2">
+                    <GraduationCap className="h-4 w-4" /> {EDUCATION.school}
+                  </span>
+                </div>
+                <div className="text-sm text-slate-300">
+                  {EDUCATION.degree}{/* optional minor: */}{(EDUCATION as any).minor ? <> w/ minor in {(EDUCATION as any).minor}</> : null}
+                </div>
+                <div className="text-sm text-slate-300">
+                  GPA: {EDUCATION.gpa}, Expected Graduation Date: {EDUCATION.gradDate}
+                </div>
+              </div>
+
+              {/* Right column */}
+              <div className="md:col-span-4">
+                <Card className="bg-white/5 border-white/10 backdrop-blur">
+                  <CardHeader>
+                    <CardTitle className="text-base">Quick Links</CardTitle>
+                    <CardDescription className="text-slate-300">Find me around the web</CardDescription>
+                  </CardHeader>
+                  <CardContent className="grid gap-2 text-sm">
+                    <a className="inline-flex items-center gap-2 hover:underline" href={`mailto:${LINKS.email}`}>
+                      <Mail className="h-4 w-4" /> {LINKS.email}
+                    </a>
+                    <a className="inline-flex items-center gap-2 hover:underline" href={`tel:${LINKS.phone}`}>
+                      <Phone className="h-4 w-4" /> {LINKS.phone}
+                    </a>
+                    <a className="inline-flex items-center gap-2 hover:underline" href={LINKS.github} target="_blank" rel="noreferrer noopener">
+                      <Github className="h-4 w-4" /> GitHub
+                    </a>
+                    <a className="inline-flex items-center gap-2 hover:underline" href={LINKS.linkedin} target="_blank" rel="noreferrer noopener">
+                      <Linkedin className="h-4 w-4" /> LinkedIn
+                    </a>
+                    {LINKS.chess && (
+                      <a className="inline-flex items-center gap-2 hover:underline" href={LINKS.chess} target="_blank" rel="noreferrer noopener">
+                        <FaRegChessKing className="h-4 w-4" /> Chess.com
+                      </a>
+                    )}
+                  </CardContent>
+                </Card>
+              </div>
+            </motion.div>
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </section>
 
       {/* Projects */}
       <Section id="projects" title="Projects" subtitle="A few representative builds and studies">
@@ -156,6 +175,7 @@ export default function App() {
 
       {/* Education */}
       <Section id="education" title="Education">
+        <div className="space-y-6">
         <Card>
           <CardHeader>
             <div className="flex flex-wrap items-center justify-between gap-3">
@@ -185,6 +205,36 @@ export default function App() {
             </div>
           </CardContent>
         </Card>
+        <Card>
+          <CardHeader>
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <CardTitle className="text-lg flex items-center gap-2">
+                  <GraduationCap className="h-5 w-5" /> {EDUCATION.school2}
+                </CardTitle>
+                <CardDescription className="flex items-center gap-2 mt-1">
+                  <MapPin className="h-4 w-4" /> {EDUCATION.location2}
+                </CardDescription>
+              </div>
+              <Badge variant="secondary" className="rounded-full">
+                {EDUCATION.degree2}
+              </Badge>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="text-sm text-slate-500 dark:text-slate-400"> {EDUCATION.gradDate2}</div>
+            <Separator className="my-4" />
+            <p className="text-sm font-medium mb-2">Relevant Coursework</p>
+            <div className="flex flex-wrap gap-2">
+              {EDUCATION.coursework2.map((c) => (
+                <Badge key={c} variant="outline" className="rounded-full">
+                  {c}
+                </Badge>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+        </div>
       </Section>
 
       {/* Skills */}
@@ -220,7 +270,7 @@ export default function App() {
             </CardHeader>
             <CardContent className="flex flex-wrap gap-2">
               {SKILLS.certifications.map((s) => (
-                <Badge key={s} variant="secondary" className="rounded-full">
+                <Badge key={s} variant="outline" className="rounded-full">
                   {s}
                 </Badge>
               ))}

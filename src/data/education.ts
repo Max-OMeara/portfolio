@@ -17,4 +17,16 @@ coursework: [
 'Analysis of Algorithms',
 'Computer Networking',
 ],
+school2: 'Lehigh University',
+location2: 'Bethlehem, PA',
+degree2: 'B.S. in Computer Science',
+minor2: 'NA',
+gpa2: '3.5',
+gradDate2: 'Transfer',
+coursework2: [
+'Calculus 2',
+'Introduction to Programming',
+'Chemistry',
+'Physics I',
+],
 };
