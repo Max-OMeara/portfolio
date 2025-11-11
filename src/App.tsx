@@ -77,16 +77,14 @@ export default function App() {
       {/* Hero */}
       <section id="top" className="relative overflow-hidden -mt-16 pt-16">
         <div className="relative h-[56vh] sm:h-[64vh]">
-          {/* Background only inside hero */}
           <div className="absolute inset-0 z-0">  {/* changed from -z-10 */}
-            <DarkVeil className="absolute inset-0" /> {/* make sure it fills this box */}
+            <DarkVeil className="absolute inset-0" /> {/* making sure it fills this box */}
           </div>
-
-          {/* Fade the veil into black so the transition is smooth */}
+          {/* Fading the veil into black so the transition is smooth */}
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-black z-10" />
 
           {/* Content container */}
-          <div className="max-w-6xl mx-auto h-full px-4 relative z-10"> {/* ensure content is above veil */}
+          <div className="max-w-6xl mx-auto h-full px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
@@ -113,7 +111,7 @@ export default function App() {
                   </span>
                 </div>
                 <div className="text-sm text-slate-300">
-                  {EDUCATION.degree}{/* optional minor: */}{(EDUCATION as any).minor ? <> w/ minor in {(EDUCATION as any).minor}</> : null}
+                  {EDUCATION.degree}{(EDUCATION as any).minor ? <> w/ minor in {(EDUCATION as any).minor}</> : null}
                 </div>
                 <div className="text-sm text-slate-300">
                   GPA: {EDUCATION.gpa}, Expected Graduation Date: {EDUCATION.gradDate}
