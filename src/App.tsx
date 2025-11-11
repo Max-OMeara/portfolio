@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, Github, Linkedin, GraduationCap, Calendar, MapPin } from 'lucide-react';
 import { FaRegChessKing } from "react-icons/fa6";
+import { IoBookOutline } from "react-icons/io5";
 import { Button } from 'components/ui/button';
 import { Card, CardHeader, CardContent, CardFooter, CardTitle, CardDescription } from 'components/ui/card';
 import { Badge } from 'components/ui/badge';
@@ -28,7 +29,7 @@ export default function App() {
   }, [dark]);
 
   const headline = useMemo(
-    () => `AI‑minded Full‑Stack Developer focused on React, TypeScript, and ML‑backed experiences`,
+    () => `AI orientated Full‑Stack Developer focused on React, TypeScript, and ML‑backed experiences`,
     []
   );
 
@@ -142,6 +143,11 @@ export default function App() {
                     {LINKS.chess && (
                       <a className="inline-flex items-center gap-2 hover:underline" href={LINKS.chess} target="_blank" rel="noreferrer noopener">
                         <FaRegChessKing className="h-4 w-4" /> Chess.com
+                      </a>
+                    )}
+                    {LINKS.goodreads && (
+                      <a className="inline-flex items-center gap-2 hover:underline" href={LINKS.goodreads} target="_blank" rel="noreferrer noopener">
+                        <IoBookOutline className="h-4 w-4" /> Goodreads
                       </a>
                     )}
                   </CardContent>

@@ -4,6 +4,7 @@ phone: string;
 github: string;
 linkedin: string;
 chess: string;
+goodreads: string;
 };
 
 
