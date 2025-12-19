@@ -6,6 +6,8 @@ import { Badge } from 'components/ui/badge';
 import { Button } from 'components/ui/button';
 import { Project } from 'types';
 
+const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+
 export function ProjectCard({ p }: { p: Project }) {
   return (
     <motion.div initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
@@ -31,7 +33,20 @@ export function ProjectCard({ p }: { p: Project }) {
           </div>
         </CardContent>
         <CardFooter className="flex gap-3">
-          {p.links.live ? (
+        {/* <CardFooter className="flex gap-3 flex-wrap"> */}
+          {Object.entries(p.links).map(
+            ([label, url]) =>
+              url && (
+                <Button key={label} asChild size="sm" variant="outline">
+                  <a href={url} target="_blank" rel="noreferrer noopener">
+                    {capitalize(label)}
+                  </a>
+                </Button>                
+              )
+          )}
+        </CardFooter>
+
+          {/* {p.links.live ? (
             <Button asChild size="sm">
               <a href={p.links.live} target="_blank" rel="noreferrer noopener">
                 Live Demo
@@ -45,15 +60,14 @@ export function ProjectCard({ p }: { p: Project }) {
           {p.links.repo ? (
             <Button asChild size="sm" variant="outline">
               <a href={p.links.repo} target="_blank" rel="noreferrer noopener">
-                Source
+                Repository
               </a>
             </Button>
           ) : (
             <Button size="sm" variant="outline" disabled>
-              Source
+              Repository
             </Button>
-          )}
-        </CardFooter>
+          )} */}
       </Card>
     </motion.div>
   );

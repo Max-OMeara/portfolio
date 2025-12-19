@@ -40,7 +40,7 @@ title: string;
 time: string;
 summary: string;
 highlights: string[];
-links: { live?: string; repo?: string };
+links: { live?: string; paper?: string; repository?: string; board?: string };
 };
 
 
