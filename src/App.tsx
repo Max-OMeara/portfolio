@@ -29,7 +29,7 @@ export default function App() {
   }, [dark]);
 
   const headline = useMemo(
-    () => `AI orientated Full‑Stack Developer focused on React, TypeScript, and ML‑backed experiences`,
+    () => `AI / Full Stack Developer focused on Python, React, TypeScript, and machine learning projects`,
     []
   );
 
