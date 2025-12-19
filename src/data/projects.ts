@@ -1,8 +1,8 @@
 import { Project } from 'types';
 export const PROJECTS: Project[] = [
 {
-title: 'Predicting CRISPR Gene-Editing Efficiency with Deep Learning',
-time: 'Oct 2025 – Present',
+title: 'Predicting Human CRISPR Gene-Editing Efficiency with Deep Learning',
+time: 'Oct 2025 – December 2025',
 summary:
 'Designed a CNN used to learn genetic relationships in CRISPR gRNA to predict a numeric score in strength of the effect.',
 highlights: ['Python', 'PyTorch', 'CNN'],
