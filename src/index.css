@@ -6,3 +6,16 @@
 
 html, body, #root { height: 100%; }
 :root { color-scheme: light dark; }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}

@@ -1,8 +1,8 @@
 export const SKILLS = {
 programming: [
+'Python',
 'JavaScript',
 'TypeScript',
-'Python',
 'Java',
 'SQL',
 'HTML',
@@ -11,6 +11,8 @@ programming: [
 'x86 Assembly',
 ],
 tools: [
+'PyTorch',
+'TensorFlow',
 'React',
 'Node.js',
 'Git',

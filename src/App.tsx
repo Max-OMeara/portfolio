@@ -18,6 +18,7 @@ import { EXPERIENCE } from 'data/experience';
 import { PROJECTS } from 'data/projects';
 import { LEADERSHIP } from 'data/leadership';
 import DarkVeil from 'components/DarkVeil';
+import { PhotoMarquee } from 'components/PhotoMarquee';
 
 export default function App() {
   const [dark, setDark] = useState(true);
@@ -313,6 +314,9 @@ export default function App() {
           ))}
         </div>
       </Section>
+
+      {/* PhotoMarquee */}
+      <PhotoMarquee />
 
       {/* Contact */}
       <Section id="contact" title="Contact" subtitle="Say hi, ask about my work, or grab my resume">

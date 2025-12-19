@@ -32,6 +32,7 @@ org: string;
 time: string;
 points: string[];
 stack?: string[];
+images? : { src: string; alt?: string }[];
 };
 
 
