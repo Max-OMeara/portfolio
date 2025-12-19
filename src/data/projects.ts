@@ -6,8 +6,8 @@ time: 'Oct 2025 – Present',
 summary:
 'Designed a CNN used to learn genetic relationships in CRISPR gRNA to predict a numeric score in strength of the effect.',
 highlights: ['Python', 'PyTorch', 'CNN'],
-links: { paper: "https://github.com/Max-OMeara/CrisprCNN/blob/main/paper_and_board/Predicting_Human_CRISPR_Gene_Editing_Efficiency_with_Deep_Learning.pdf",
-     repository: "https://github.com/Max-OMeara/CrisprCNN",
+links: { repository: "https://github.com/Max-OMeara/CrisprCNN",
+    paper: "https://github.com/Max-OMeara/CrisprCNN/blob/main/paper_and_board/Predicting_Human_CRISPR_Gene_Editing_Efficiency_with_Deep_Learning.pdf",
     board: "https://github.com/Max-OMeara/CrisprCNN/blob/main/paper_and_board/Project_Board_CS523.pdf" },
 },
 {

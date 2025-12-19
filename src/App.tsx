@@ -324,7 +324,7 @@ export default function App() {
                   I’m open to internships and roles in full‑stack, AI/ML, and platform engineering. The fastest way to reach me is email.
                 </p>
                 <div className="flex flex-col gap-2">
-                  <Button asChild className="w-fit">
+                  <Button asChild variant="outline" className="w-fit">
                     <a href={`mailto:${LINKS.email}`}>
                       <Mail className="h-4 w-4 mr-2" />Email Me
                     </a>
