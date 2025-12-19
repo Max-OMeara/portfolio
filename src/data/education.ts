@@ -19,7 +19,7 @@ coursework: [
 ],
 school2: 'Lehigh University',
 location2: 'Bethlehem, PA',
-degree2: 'B.S. in Computer Science',
+degree2: 'Transfer',
 minor2: 'NA',
 gpa2: '3.5',
 gradDate2: 'Transfer',
