@@ -6,6 +6,7 @@ degree: 'B.A. in Computer Science',
 minor: 'Classical Civilization',
 gpa: '3.49',
 gradDate: 'May 2026',
+deansList: '3',
 coursework: [
 'Deep Learning',
 'Full-Stack Application',

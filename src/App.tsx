@@ -115,7 +115,10 @@ export default function App() {
                   {EDUCATION.degree}{(EDUCATION as any).minor ? <> w/ minor in {(EDUCATION as any).minor}</> : null}
                 </div>
                 <div className="text-sm text-slate-300">
-                  GPA: {EDUCATION.gpa}, Expected Graduation Date: {EDUCATION.gradDate}
+                  GPA: {EDUCATION.gpa}, Deans List for {EDUCATION.deansList} semesters
+                </div>
+                <div className="text-sm text-slate-300">
+                  Expected Graduation Date: {EDUCATION.gradDate}
                 </div>
               </div>
 

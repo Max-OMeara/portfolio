@@ -23,6 +23,7 @@ minor2: string;
 gpa2: string;
 gradDate2: string;
 coursework2: string[];
+deansList: string;
 };
 
 
