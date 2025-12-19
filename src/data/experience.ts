@@ -1,4 +1,10 @@
 import { Experience } from 'types';
+import eohhs from './images/eohhs.png';
+import neaq from './images/neaq.jpg';
+import oct from './images/IMG_9879.png';
+import turtle from './images/IMG_9784.JPG';
+import cv from './images/cv.png';
+
 export const EXPERIENCE: Experience[] = [
 {
 role: 'AI Software Engineer',
@@ -11,6 +17,9 @@ points: [
 'Led integration testing: test plans, scripts, validation.',
 ],
 stack: ['TypeScript', 'Python', 'AWS', 'CI/CD'],
+images: [
+  { src: eohhs, alt: "blank1" }
+],
 },
 {
 role: 'Information & Technology Intern',
@@ -21,6 +30,11 @@ points: [
 'Handled remote software installs/updates with security focus.',
 ],
 stack: ['Networking', 'Scripting', 'Endpoint Mgmt'],
+images: [
+  { src: neaq, alt: "blank1" },
+  { src: oct, alt: "blank2" },
+  { src: turtle, alt: "blank3" }
+],
 },
 {
 role: 'AI Research Assistant',
@@ -31,6 +45,9 @@ points: [
 'Collaborated to increase model efficiency and accuracy.',
 ],
 stack: ['Python', 'ML', 'Evaluation'],
+images: [
+  { src: cv, alt: "blank1" }
+],
 },
 {
 role: 'IT Support Specialist',
