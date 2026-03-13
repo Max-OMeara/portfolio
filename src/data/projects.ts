@@ -1,6 +1,15 @@
 import { Project } from 'types';
 export const PROJECTS: Project[] = [
 {
+title: 'Flora Fauna Classifier',
+time: 'February 2026 – March 2026',
+summary:
+'Tested the effects of transfer learning vs fine-tuning learning with CNNs to predict animal kindgom classes based from images.',
+highlights: ['Python', 'PyTorch', 'CNN', 'Transfer Learning', 'Fine-tuning'],
+links: { repository: "https://github.com/Max-OMeara/Flora_and_Fauna_Classifier",
+},
+},
+{
 title: 'Predicting Human CRISPR Gene-Editing Efficiency with Deep Learning',
 time: 'Oct 2025 – December 2025',
 summary:
