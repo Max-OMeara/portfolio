@@ -12,7 +12,9 @@ import { ProjectCard } from 'components/projectCard';
 import { ExperienceItem } from 'components/experienceItem';
 import { Anchor } from 'components/anchor';
 import { LINKS } from 'data/links';
-import { EDUCATION } from 'data/education';
+import { BU_EDUCATION } from 'data/education';
+import { GBU_EDUCATION } from 'data/education';
+import { LU_EDUCATION } from 'data/education';
 import { SKILLS } from 'data/skills';
 import { EXPERIENCE } from 'data/experience';
 import { PROJECTS } from 'data/projects';
@@ -108,17 +110,45 @@ export default function App() {
 
                 <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-300">
                   <span className="inline-flex items-center gap-2">
-                    <GraduationCap className="h-4 w-4" /> {EDUCATION.school}
+                    <GraduationCap className="h-4 w-4" /> {GBU_EDUCATION.school}
                   </span>
                 </div>
                 <div className="text-sm text-slate-300">
-                  {EDUCATION.degree}{(EDUCATION as any).minor ? <> w/ minor in {(EDUCATION as any).minor}</> : null}
+                  {GBU_EDUCATION.degree}{(GBU_EDUCATION as any).minor ? <> w/ minor in {(GBU_EDUCATION as any).minor}</> : null}
                 </div>
                 <div className="text-sm text-slate-300">
-                  GPA: {EDUCATION.gpa}, Deans List for {EDUCATION.deansList} semesters
+                  GPA: {GBU_EDUCATION.gpa} {/*, Deans List for {GBU_EDUCATION.deansList} semesters*/}
                 </div>
                 <div className="text-sm text-slate-300">
-                  Expected Graduation Date: {EDUCATION.gradDate}
+                  Expected Graduation Date: {GBU_EDUCATION.gradDate}
+                </div>
+                <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-300">
+                  <span className="inline-flex items-center gap-2">
+                    <GraduationCap className="h-4 w-4" /> {BU_EDUCATION.school}
+                  </span>
+                </div>
+                <div className="text-sm text-slate-300">
+                  {BU_EDUCATION.degree}{(BU_EDUCATION as any).minor ? <> w/ minor in {(BU_EDUCATION as any).minor}</> : null}
+                </div>
+                <div className="text-sm text-slate-300">
+                  GPA: {BU_EDUCATION.gpa}, Deans List for {BU_EDUCATION.deansList} semesters
+                </div>
+                <div className="text-sm text-slate-300">
+                  Expected Graduation Date: {BU_EDUCATION.gradDate}
+                </div>
+                <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-300">
+                  <span className="inline-flex items-center gap-2">
+                    <GraduationCap className="h-4 w-4" /> {LU_EDUCATION.school}
+                  </span>
+                </div>
+                <div className="text-sm text-slate-300">
+                  {LU_EDUCATION.degree}{(LU_EDUCATION as any).minor2 ? <> w/ minor in {(LU_EDUCATION as any).minor2}</> : null}
+                </div>
+                <div className="text-sm text-slate-300">
+                  GPA: {LU_EDUCATION.gpa}, Deans List for {LU_EDUCATION.deansList} semester
+                </div>
+                <div className="text-sm text-slate-300">
+                  Graduation Date: {LU_EDUCATION.gradDate}
                 </div>
               </div>
 
@@ -189,23 +219,23 @@ export default function App() {
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
                 <CardTitle className="text-lg flex items-center gap-2">
-                  <GraduationCap className="h-5 w-5" /> {EDUCATION.school}
+                  <GraduationCap className="h-5 w-5" /> {GBU_EDUCATION.school}
                 </CardTitle>
                 <CardDescription className="flex items-center gap-2 mt-1">
-                  <MapPin className="h-4 w-4" /> {EDUCATION.location}
+                  <MapPin className="h-4 w-4" /> {GBU_EDUCATION.location}
                 </CardDescription>
               </div>
               <Badge variant="secondary" className="rounded-full">
-                {EDUCATION.degree}
+                {GBU_EDUCATION.degree}
               </Badge>
             </div>
           </CardHeader>
           <CardContent>
-            <div className="text-sm text-slate-500 dark:text-slate-400">Expected Graduation: {EDUCATION.gradDate}</div>
+            <div className="text-sm text-slate-500 dark:text-slate-400">Expected Graduation: {GBU_EDUCATION.gradDate}</div>
             <Separator className="my-4" />
             <p className="text-sm font-medium mb-2">Relevant Coursework</p>
             <div className="flex flex-wrap gap-2">
-              {EDUCATION.coursework.map((c) => (
+              {GBU_EDUCATION.coursework.map((c) => (
                 <Badge key={c} variant="outline" className="rounded-full">
                   {c}
                 </Badge>
@@ -218,23 +248,52 @@ export default function App() {
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
                 <CardTitle className="text-lg flex items-center gap-2">
-                  <GraduationCap className="h-5 w-5" /> {EDUCATION.school2}
+                  <GraduationCap className="h-5 w-5" /> {BU_EDUCATION.school}
                 </CardTitle>
                 <CardDescription className="flex items-center gap-2 mt-1">
-                  <MapPin className="h-4 w-4" /> {EDUCATION.location2}
+                  <MapPin className="h-4 w-4" /> {BU_EDUCATION.location}
                 </CardDescription>
               </div>
               <Badge variant="secondary" className="rounded-full">
-                {EDUCATION.degree2}
+                {BU_EDUCATION.degree}
               </Badge>
             </div>
           </CardHeader>
           <CardContent>
-            <div className="text-sm text-slate-500 dark:text-slate-400"> {EDUCATION.gradDate2}</div>
+            <div className="text-sm text-slate-500 dark:text-slate-400">Expected Graduation: {BU_EDUCATION.gradDate}</div>
             <Separator className="my-4" />
             <p className="text-sm font-medium mb-2">Relevant Coursework</p>
             <div className="flex flex-wrap gap-2">
-              {EDUCATION.coursework2.map((c) => (
+              {BU_EDUCATION.coursework.map((c) => (
+                <Badge key={c} variant="outline" className="rounded-full">
+                  {c}
+                </Badge>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <CardTitle className="text-lg flex items-center gap-2">
+                  <GraduationCap className="h-5 w-5" /> {LU_EDUCATION.school}
+                </CardTitle>
+                <CardDescription className="flex items-center gap-2 mt-1">
+                  <MapPin className="h-4 w-4" /> {LU_EDUCATION.location}
+                </CardDescription>
+              </div>
+              <Badge variant="secondary" className="rounded-full">
+                {LU_EDUCATION.degree}
+              </Badge>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="text-sm text-slate-500 dark:text-slate-400"> {LU_EDUCATION.gradDate}</div>
+            <Separator className="my-4" />
+            <p className="text-sm font-medium mb-2">Relevant Coursework</p>
+            <div className="flex flex-wrap gap-2">
+              {LU_EDUCATION.coursework.map((c) => (
                 <Badge key={c} variant="outline" className="rounded-full">
                   {c}
                 </Badge>

@@ -16,13 +16,6 @@ minor: string;
 gpa: string;
 gradDate: string;
 coursework: string[];
-school2: string;
-location2: string;
-degree2: string;
-minor2: string;
-gpa2: string;
-gradDate2: string;
-coursework2: string[];
 deansList: string;
 };
 

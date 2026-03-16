@@ -1,5 +1,5 @@
 import { Education } from 'types';
-export const EDUCATION: Education = {
+export const BU_EDUCATION: Education = {
 school: 'Boston University',
 location: 'Boston, MA',
 degree: 'B.A. in Computer Science',
@@ -18,16 +18,33 @@ coursework: [
 'Analysis of Algorithms',
 'Computer Networking',
 ],
-school2: 'Lehigh University',
-location2: 'Bethlehem, PA',
-degree2: 'Transfer',
-minor2: 'NA',
-gpa2: '3.5',
-gradDate2: 'Transfer',
-coursework2: [
+};
+
+export const LU_EDUCATION: Education = {
+school: 'Lehigh University',
+location: 'Bethlehem, PA',
+degree: 'B.A. in Computer Science',
+minor: '',
+gpa: '3.50',
+gradDate: 'Transfer',
+deansList: '1',
+coursework: [
 'Calculus 2',
 'Introduction to Programming',
 'Chemistry',
 'Physics I',
+],
+};
+
+export const GBU_EDUCATION: Education = {
+school: 'Boston University',
+location: 'Boston, MA',
+degree: 'M.S. in Artifitial Inteligence',
+minor: '',
+gpa: 'NA',
+gradDate: 'May 2028',
+deansList: '',
+coursework: [
+'NA'
 ],
 };
